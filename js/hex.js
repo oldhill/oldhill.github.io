@@ -15,9 +15,9 @@ $(document).on('ready', function() {
       input = '15';
     }
 
-    // Parse input string into a (base 10) integer, then convert this into a
+    // Parse input string into a (base 10) number, then convert this into a
     // hex (base 16) representation of itself. Also prepend that "0x" bc why not.
-    $("#tohex-results").append('<br>0x' + parseInt(input).toString(16) + '</br>');
+    $("#tohex-results").append('<br>0x' + parseInt(input, 10).toString(16) + '</br>');
 
   })
 })
