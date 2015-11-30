@@ -5,11 +5,9 @@ $(document).on('ready', function() {
 
   if (document.cookie === '') {
     $('body').append('Welcome for the first time!');
-    document.cookie = 'something=somethingelse';
-    console.log('first time');
+    document.cookie = 'something=somethingelse; secure=True; max-age=300';
   } else {
     $('body').append('Welcome back!');
-    console.log('>=1 time');
   }
 
 })
