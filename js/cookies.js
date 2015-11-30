@@ -4,11 +4,11 @@
 $(document).on('ready', function() {
 
   if (document.cookie === '') {
-    $('hi').append('Welcome for the first time!');
+    $('body').append('Welcome for the first time!');
     document.cookie = 'something=somethingelse';
     console.log('first time');
   } else {
-    $('hi').append('Welcome back!');
+    $('body').append('Welcome back!');
     console.log('>=1 time');
   }
 
