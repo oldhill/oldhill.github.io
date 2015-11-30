@@ -1,9 +1,15 @@
 // https://developer.mozilla.org/en-US/docs/Web/API/Document/cookie
 
-console.log('Any cookies yet? ' + document.cookie);
 
-console.log('Setting a cookie...');
+$(document).on('ready', function() {
 
-document.cookie = 'something=somethingelse';
+  allCookies = document.cookie;
 
-console.log('OK set one: ' + document.cookie);
+  if (allCookies === '') {
+    $('hi').append('Welcome for the first time!');
+    document.cookie = 'something=somethingelse';
+  } else {
+    $('hi').append('Welcome back!');
+  }
+
+})
