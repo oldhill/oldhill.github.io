@@ -3,13 +3,13 @@
 
 $(document).on('ready', function() {
 
-  allCookies = document.cookie;
-
-  if (allCookies === '') {
+  if (document.cookie === '') {
     $('hi').append('Welcome for the first time!');
     document.cookie = 'something=somethingelse';
+    console.log('first time');
   } else {
     $('hi').append('Welcome back!');
+    console.log('>=1 time');
   }
 
 })
